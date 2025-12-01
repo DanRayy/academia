@@ -1,1 +1,1 @@
-site muito legal feito usando JAVA 🥲
+site muito legal usando JAVA 🥲
