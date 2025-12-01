@@ -18,7 +18,7 @@
     <div class="form-container">
         <h2>Acesso Restrito</h2>
         
-        <% if ("senha_incorreta".equals(erro)) { %>
+        <% if("senha_incorreta".equals(erro)){ %>
             <div class="mensagem erro">
                 Senha incorreta! Tente novamente.
             </div>
