@@ -6,12 +6,12 @@
     
     try{
         imagemAtual = Integer.parseInt(request.getParameter("index"));
-    }catch (Exception e){
+    }catch(Exception e){
         imagemAtual = 0;
     }
     if("proximo".equals(acao)){
         imagemAtual++;
-        if (imagemAtual >= imagens.length){
+        if(imagemAtual >= imagens.length){
             imagemAtual = 0;
         }
     }else if("anterior".equals(acao)){
