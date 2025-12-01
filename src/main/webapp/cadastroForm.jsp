@@ -24,8 +24,7 @@
             
             <div class="form-group">
                 <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" name="telefone" required 
-                       placeholder="(11) 99999-9999" maxlength="15">
+                <input type="text" id="telefone" name="telefone" required placeholder="(11) 99999-9999" maxlength="15">
             </div>
             
             <div class="form-group">
@@ -33,7 +32,7 @@
                 <select id="plano" name="plano" required>
                     <option value="">Selecione um plano</option>
                     <option value="Plano Mensal">Mensal - 1 x R$120</option>
-                    <option value="Plano Trimestral">Trimestarl - 3 x R$110</option>
+                    <option value="Plano Trimestral">Trimestral - 3 x R$110</option>
                     <option value="Plano Semestral">Semestral - 6 x R$100</option>
                     <option value="Plano Anual">Anual - 12 x R$90</option>
                 </select>
@@ -42,8 +41,8 @@
             <button type="submit" class="btn-submit">Cadastrar</button>
         </form>
         
-        <div class="voltar-p-home">
-            <a href="index.jsp"><button>Voltar para Home</button></a>
+        <div class="btn-acoes">
+            <a href="index.jsp"><button>Voltar para home</button></a>
         </div>
     </div>
 </body>

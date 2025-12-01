@@ -1,6 +1,6 @@
 package br.com.academia.controller;
 
-import br.com.academia.dao.ClienteDAO;
+import br.com.academia.gc.ClienteGC;
 import br.com.academia.model.Cliente;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -35,7 +35,7 @@ public class EditarServlet extends HttpServlet {
 		cliente.setTelefone(telefone);
 		cliente.setPlano(plano);
 		
-		ClienteDAO dao = new ClienteDAO();
+		ClienteGC dao = new ClienteGC();
 		dao.atualizarCliente(cliente);
 		
 		response.sendRedirect("funcionarios.jsp");

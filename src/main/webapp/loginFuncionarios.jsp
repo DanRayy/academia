@@ -33,7 +33,7 @@
             <button type="submit" class="btn-submit">Acessar</button>
         </form>
         
-        <div style="text-align: center; margin-top: 20px;">
+        <div class="btn-acoes">
             <a href="index.jsp"><button>Voltar para Home</button></a>
         </div>
     </div>

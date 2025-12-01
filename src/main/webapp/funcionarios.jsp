@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="br.com.academia.dao.ClienteDAO" %>
+<%@ page import="br.com.academia.gc.ClienteGC" %>
 <%@ page import="br.com.academia.model.Cliente" %>
 <%@ page import="java.util.List" %>
 <%
-    if (session.getAttribute("funcionarioLogado") == null) {
+if (session.getAttribute("funcionarioLogado") == null) {
         response.sendRedirect("loginFuncionarios.jsp");
         return;
     }
 
-    ClienteDAO clienteDAO = new ClienteDAO();
+    ClienteGC clienteDAO = new ClienteGC();
     List<Cliente> clientes = null;
     String mensagem = "";
     String acao = request.getParameter("acao");
@@ -47,7 +47,7 @@
     </div>
 
     <% if (!mensagem.isEmpty()) { %>
-        <div class="mensagem sucesso" style="max-width: 800px; margin: 20px auto;">
+        <div class="mensagem-sucesso">
             <%= mensagem %>
         </div>
     <% } %>

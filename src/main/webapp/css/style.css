@@ -1,11 +1,11 @@
 /*reset e  base*/
-* { 
+*{ 
 	margin: 0; 
 	padding: 0; 
 	box-sizing: border-box; 
 }
 
-body {
+body{
     font-family: 'Arial', sans-serif;
     padding: 20px;
     background: linear-gradient(135deg, #66ceea 0%, #2530bd 100%);
@@ -14,17 +14,18 @@ body {
     line-height: 1.6;
 }
 
-a { 
+a{ 
 	text-decoration: none; 
 	color: inherit; 
 	transition: 0.3s; 
 }
-ul { 
+
+ul{ 
 	list-style: none; 
 }
 
 /*componentes comuns (vidros e sombras)*/
-.localizacao, .minigaleria, .form-container, .lista-clientes, .galeria-container, .descricao {
+.localizacao, .minigaleria, .form-container, .lista-clientes, .galeria-container, .descricao{
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -32,20 +33,22 @@ ul {
     padding: 25px;
 }
 
+.descricao{
+	margin: 20px;
+}
+
 /*botões*/
-button, .btn-submit, .rede-social, .seta, .menu select {
+button, .btn-submit, .rede-social, .seta, .menu select{
     cursor: pointer;
-    transition: all 0.3s ease;
     border: none;
 }
 
-button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
-    transform: translateY(-3px);
+button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover{
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 /*cabeçalho*/
-.header {
+.header{
     text-align: center;
     margin-bottom: 40px;
     color: white;
@@ -54,18 +57,18 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
     border-radius: 15px;
 }
 
-.header h1 { 
+.header h1{ 
 	font-size: 2.8em; 
 	text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
 }
 
 /*menu*/
-.menu { 
+.menu{ 
 	text-align: center; 
 	margin-bottom: 40px; 
 }
 
-.menu select {
+.menu select{
     padding: 14px 25px;
     border-radius: 30px;
     background: white;
@@ -73,7 +76,7 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
     box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.menu button {
+.menu button{
     padding: 14px 30px;
     border-radius: 30px;
     background: #136883;
@@ -83,7 +86,7 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
 }
 
 /*layout principal*/
-.bigcontainer {
+.bigcontainer{
     max-width: 1300px;
     display: flex;
     gap: 30px;
@@ -91,23 +94,23 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
     height: 600px;
 }
 
-.localizacao { 
+.localizacao{ 
 	width: 350px; 
 	text-align: center; 
 }
-.minigaleria { 
+.minigaleria{ 
 	flex: 1; 
 	display: flex; 
 	flex-direction: column; 
 }
 
-.redes-links { 
+.redes-links{ 
 	display: flex; 
 	justify-content: center; 
 	gap: 15px; 
 	margin-top: 15px; 
 }
-.rede-social {
+.rede-social{
     width: 50px; 
     height: 50px;
     background: #f8f9fa; 
@@ -116,10 +119,15 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
     align-items: center; 
     justify-content: center;
 }
-.rede-social img { 
+
+.redes-sociais{
+	padding-top: 100px;
+}
+
+.rede-social img{ 
 	width: 24px; 
 }
-.mapa img { 
+.mapa img{ 
 	width: 100%; 
 	height: 180px; 
 	object-fit: cover; 
@@ -128,13 +136,13 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
 }
 
 /*galeria*/
-.galeria-container { 
+.galeria-container{ 
 	max-width: 900px; 
 	margin: 40px auto; 
 	text-align: center; 
 	background: rgba(255, 255, 255, 0.1); 
 }
-.galeria { 
+.galeria{ 
 	display: flex; 
 	align-items: center; 
 	justify-content: center; 
@@ -142,29 +150,29 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
 	flex-wrap: wrap; 
 }
 
-.imagem-container {
+.imagem-container{
     position: relative; 
     border-radius: 20px; 
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
-.imagem-container img { 
+.imagem-container img{ 
 	width: 550px; 
 	height: 380px; 
 	object-fit: cover; 
 	display: block; 
 }
 
-.seta {
+.seta{
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%; width: 60px; height: 60px;
     display: flex; align-items: center; justify-content: center;
 }
-.seta img { 
+.seta img{ 
 	width: 25px; 
 }
 
-.contador {
+.contador{
     position: absolute; 
     bottom: 15px; 
     right: 15px;
@@ -175,31 +183,21 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
 }
 
 /*formulario*/
-.form-container { 
+.form-container{ 
 	max-width: 600px; 
 	margin: 30px auto; 
 }
-.form-group { 
+.form-group{ 
 	margin-bottom: 20px; 
 }
-.form-group input, .form-group select {
+.form-group input, .form-group select{
     width: 100%; 
     padding: 12px;
     border: 2px solid #ddd; 
     border-radius: 10px;
 }
 
-.radio-option {
-    margin: 10px 0; 
-    padding: 15px;
-    border: 2px solid #ddd; 
-    border-radius: 10px;
-    cursor: pointer; 
-    background: white;
-}
-.radio-option:hover { background: #f8f9fa; border-color: #667eea; }
-
-.btn-submit {
+.btn-submit{
     width: 100%; 
     padding: 15px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -209,18 +207,18 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
 }
 
 /*lista de cliente e mensagens*/
-.lista-clientes { 
+.lista-clientes{ 
 	max-width: 800px; 
 	margin: 20px auto; 
 	background: white; 
 }
 
-.lista-clientes h2 {
+.lista-clientes h2{
 	text-align: center; 
 	margin-bottom: 20px;
 }
 
-.cliente-item {
+.cliente-item{
     padding: 15px; 
     border-bottom: 1px solid #eee;
     display: flex; 
@@ -236,7 +234,7 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
     margin-left: 5px;
 }
 
-.btn-editar {
+.btn-editar{
     background: green;
     color: white;
     padding: 8px 15px; 
@@ -244,61 +242,37 @@ button:hover, .btn-submit:hover, .rede-social:hover, .seta:hover {
     margin-left: 5px;
 }
 
-.voltar-p-home a {
+.voltar-p-home a{
 	text-align: center; 
 	margin-top: 20px;
-	
 }
 
-.btn-acoes {
+.btn-acoes{
     width: fit-content;
     margin: 0 auto;
 }
 
 .btn-acoes button{
-	background: rgb(18, 93, 168);
+	background: rgb(19 104 131);
 	color: white;
 	padding: 8px 15px; 
 	border-radius: 5px; 
 	margin: 20px;
 }
 
-.btn-excluir:hover, .btn-atualizar:hover, btn-acoes:hover { 
-	background: black; 
-}
-
-.mensagem { 
+.mensagem-sucesso{
+	background: rgb(19 104 131);
+	max-width: 800px; 
+	margin: 20px auto;
 	padding: 15px; 
 	border-radius: 10px; 
-	margin: 20px auto; 
+	margin: 20px auto;
+	color: white;
 	text-align: center; 
 	max-width: 500px; 
 }
-.mensagem.sucesso { 
-	background: #d4edda; 
-	color: #155724; 
-}
-.mensagem.erro { 
+
+.mensagem.erro{ 
 	background: #f8d7da; 
 	color: #721c24;
-}
-
-/*responsividade*/
-@media (max-width: 768px) {
-    .bigcontainer { 
-    flex-direction: column; 
-    height: auto; 
-    }
-    .localizacao, .minigaleria { 
-    width: 100%; 
-    }
-    .imagem-container img { 
-    width: 100%; 
-    height: auto; 
-    }
-    .cliente-item { 
-    flex-direction: column; 
-    align-items: flex-start; 
-    gap: 10px; 
-    }
 }

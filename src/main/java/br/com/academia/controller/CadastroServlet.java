@@ -1,8 +1,7 @@
 package br.com.academia.controller;
 
+import br.com.academia.gc.ClienteGC;
 import br.com.academia.model.Cliente;
-import br.com.academia.dao.ClienteDAO;
-
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -32,9 +31,9 @@ public class CadastroServlet extends HttpServlet {
 		
 		Cliente cliente = new Cliente (nome, telefone, plano);
 		
-		ClienteDAO clienteDAO = new ClienteDAO();
-		clienteDAO.addCliente(cliente);
+		ClienteGC clienteGC = new ClienteGC();
+		clienteGC.addCliente(cliente);
 		
-		response.sendRedirect("cadastroSucesso.jsp");
+		response.sendRedirect("index.jsp");
 	}
 }

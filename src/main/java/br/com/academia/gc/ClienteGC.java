@@ -1,4 +1,4 @@
-package br.com.academia.dao;
+package br.com.academia.gc;
 
 import br.com.academia.model.Cliente;
 import br.com.academia.model.DataBaseConnection;
@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClienteDAO {
+public class ClienteGC {
 	public void addCliente(Cliente cliente) {
 		String sql = "INSERT INTO clientes (nome, telefone, plano) VALUES (?,?,?)";
 		try (Connection conn = DataBaseConnection.getConnection();
