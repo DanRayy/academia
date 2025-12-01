@@ -1,33 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-    // Array de imagens
-    String[] imagens = {
-        "imagens/pilates1.jpg",
-        "imagens/pilates2.jpg", 
-        "imagens/pilates3.jpg",
-        "imagens/pilates4.jpg",
-        "imagens/pilates5.jpg"
-    };
-    
-    //pega o parâmetro da URL
+    String[] imagens = {"imagens/pilates1.jpg", "imagens/pilates2.jpg", "imagens/pilates3.jpg", "imagens/pilates4.jpg", "imagens/pilates5.jpg"};
+
     String acao = request.getParameter("acao");
     int imagemAtual = 0;
-    
-    // Tenta pegar o índice da sessão, se não existir, começa em 0
-    try {
+
+    try{
         imagemAtual = Integer.parseInt(request.getParameter("index"));
-    } catch (Exception e) {
+    }catch(Exception e){
         imagemAtual = 0;
     }
     
-    if ("proximo".equals(acao)) {
+    if("proximo".equals(acao)){
         imagemAtual++;
-        if (imagemAtual >= imagens.length) {
+        if(imagemAtual >= imagens.length){
             imagemAtual = 0;
         }
-    } else if ("anterior".equals(acao)) {
+    }else if("anterior".equals(acao)){
         imagemAtual--;
-        if (imagemAtual < 0) {
+        if(imagemAtual < 0){
             imagemAtual = imagens.length - 1;
         }
     }
@@ -45,7 +36,6 @@
         <p>Aulas de Pilates</p>
     </div>
 
-    <!-- GALERIA -->
     <div class="galeria-container">
         <div class="galeria">
             <!-- Botão Anterior -->
@@ -55,13 +45,11 @@
                 </button>
             </a>
             
-            <!-- Imagem Atual -->
             <div class="imagem-container">
                 <img src="<%= imagens[imagemAtual] %>" alt="Aula de Pilates">
                 <div class="contador"><%= (imagemAtual + 1) %> / <%= imagens.length %></div>
             </div>
             
-            <!-- Botão Próximo -->
             <a href="pilates.jsp?acao=proximo&index=<%= imagemAtual %>">
                 <button class="seta seta-direita">
                 	<img alt="Voltar" src="imagens/setadireita.png">
