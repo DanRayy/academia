@@ -1,30 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-    String[] imagens = {
-        "imagens/treinos1.jpg",
-        "imagens/treinos2.jpg",
-        "imagens/treinos3.jpg",
-        "imagens/treinos4.jpg",
-        "imagens/treinos5.jpg"
-    };
+    String[] imagens = {"imagens/treinos1.jpg", "imagens/treinos2.jpg", "imagens/treinos3.jpg", "imagens/treinos4.jpg", "imagens/treinos5.jpg"};
     
     String acao = request.getParameter("acao");
     int imagemAtual = 0;
     
-    try {
+    try{
         imagemAtual = Integer.parseInt(request.getParameter("index"));
-    } catch (Exception e) {
+    }catch(Exception e){
         imagemAtual = 0;
     }
     
-    if ("proximo".equals(acao)) {
+    if("proximo".equals(acao)){
         imagemAtual++;
-        if (imagemAtual >= imagens.length) {
+        if(imagemAtual >= imagens.length){
             imagemAtual = 0;
         }
-    } else if ("anterior".equals(acao)) {
+    }else if("anterior".equals(acao)){
         imagemAtual--;
-        if (imagemAtual < 0) {
+        if(imagemAtual < 0){
             imagemAtual = imagens.length - 1;
         }
     }
