@@ -3,7 +3,7 @@
 <%@ page import="br.com.academia.model.Cliente" %>
 <%@ page import="java.util.List" %>
 <%
-if (session.getAttribute("funcionarioLogado") == null) {
+if (session.getAttribute("funcionarioLogado") == null){
         response.sendRedirect("loginFuncionarios.jsp");
         return;
     }
@@ -14,17 +14,15 @@ if (session.getAttribute("funcionarioLogado") == null) {
     String acao = request.getParameter("acao");
     String idExcluir = request.getParameter("id");
     
-    if ("excluir".equals(acao) && idExcluir != null) {
-        try {
+    if("excluir".equals(acao) && idExcluir != null){
+        try{
             int id = Integer.parseInt(idExcluir);
             clienteDAO.excluirCliente(id);
             mensagem = "Cliente excluído com sucesso!";
-        } catch (Exception e) {
+        }catch(Exception e){
             mensagem = "Erro ao excluir cliente: " + e.getMessage();
         }
     }
-    
-    // Carrega a lista de clientes
     clientes = clienteDAO.listarClientes();
 %>
 <!DOCTYPE html>
@@ -55,12 +53,12 @@ if (session.getAttribute("funcionarioLogado") == null) {
     <div class="lista-clientes">
         <h2>Clientes Cadastrados</h2>
         
-        <% if (clientes == null || clientes.isEmpty()) { %>
+        <% if(clientes == null || clientes.isEmpty()){ %>
             <div class="sem-clientes">
                 Nenhum cliente cadastrado.
             </div>
-        <% } else { %>
-            <% for (Cliente cliente : clientes) { %>
+        <% }else{ %>
+            <% for(Cliente cliente : clientes){ %>
             	    <div class="cliente-item">
                     <div class="cliente-info">
                         <div class="cliente-nome"><%= cliente.getNome() %></div>
