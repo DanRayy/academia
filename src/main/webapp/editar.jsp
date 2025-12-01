@@ -1,7 +1,6 @@
 <%@ page import="br.com.academia.gc.ClienteGC" %>
 <%@ page import="br.com.academia.model.Cliente" %>
 <%
-// Pega o ID da URL e busca no banco
     int id = Integer.parseInt(request.getParameter("id"));
     ClienteGC dao = new ClienteGC();
     Cliente clienteAtual = dao.buscarPorId(id);
@@ -10,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Editar informações do cliente</title>
+    <title>Editar informaÃ§Ãµes do cliente</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -48,11 +47,11 @@
 			        </select>
 			    </div>
 			    
-			    <button type="submit" class="btn-submit">Salvar Alterações</button>
+			    <button type="submit" class="btn-submit">Salvar AlteraÃ§Ãµes</button>
 			</form>
         
         <div class="btn-acoes">
-            <a href="funcionarios.jsp"><button>Voltar para funcionários</button></a>
+            <a href="funcionarios.jsp"><button>Voltar para funcionÃ¡rios</button></a>
         </div>
     </div>
 </body>
